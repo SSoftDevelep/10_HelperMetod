@@ -1,0 +1,189 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home Page2</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+    <div class="container-fluid">
+
+        <h2> Home Page 2</h2>
+        <hr />
+        @*header*@
+        <div class="row">
+
+            <div class="col-xs-12">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Site Adi</a>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="menu">
+                            <ul class="nav navbar-nav">
+                                <li><a href="/Home/HomePage">Page1</a></li>
+                                <li><a href="/Home/HomePage2">Page2</a></li>
+                                <li><a href="/Home/HomePage3"> Page3</a></li>
+
+                            </ul>
+
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+
+            </div>
+
+        </div>
+
+        @*body*@
+        <div class="row">
+
+            <div class="col-md-9">
+                <h2> Makaleler</h2>
+                <hr />
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Panel heading without title
+                    </div>
+
+                    <div class="panel-body">
+                        <p>Ut fusce varius nisl ac ipsum gravida vel pretium tellus tincidunt integer eu augue augue nunc elit dolor, luctus placerat.</p>
+                        @BootstrapHelper.Buttonum(val: "more")
+                    </div>
+
+                    <div class="panel-footer">
+
+                       @for (int i = 0; i < 3; i++)
+                       {
+                           @BootstrapHelper.Tag(text: "tag" + i.ToString());
+                       }
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Panel heading without title
+                    </div>
+
+                    <div class="panel-body">
+                        <p>Ut fusce varius nisl ac ipsum gravida vel pretium tellus tincidunt integer eu augue augue nunc elit dolor, luctus placerat.</p>
+
+                        @BootstrapHelper.Buttonum(val: "more")
+
+                    </div>
+
+                    <div class="panel-footer">
+                        @for (int i = 0; i < 3; i++)
+                        {
+                            @BootstrapHelper.Tag("success", "tag" + i.ToString());
+                        }
+
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Panel heading without title
+                    </div>
+
+                    <div class="panel-body">
+                        <p>Ut fusce varius nisl ac ipsum gravida vel pretium tellus tincidunt integer eu augue augue nunc elit dolor, luctus placerat.</p>
+
+                        @BootstrapHelper.Buttonum(val: "more")
+
+                    </div>
+
+                    <div class="panel-footer">
+                        @for (int i = 0; i < 3; i++)
+                        {
+                            @BootstrapHelper.Tag("primary", "tag" + i.ToString());
+                        }
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="col-md-3">
+                <h2> Kategoriler</h2>
+
+             @BootstrapHelper.LinkList("list1", "Kategori1", "Kategori2", "Kategori3", "Kategori4", "Kategori5", "Kategori6", "Kategori7");
+
+            </div>
+
+        </div>
+        <hr />
+        <div class="row">
+
+            <div class="col-md-4">
+                <ul class="small">
+                    <li>
+                        <a href="#">Consectetur adipiscing elit fusce vel.</a>
+                    </li>
+                    <li>
+                        <a href="#">Sapien elit in malesuada semper.</a>
+                    </li>
+                    <li>
+                        <a href="#">Mi, id sollicitudin urna fermentum.</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="small">
+                    <li>
+                        <a href="#">Consectetur adipiscing elit fusce vel.</a>
+                    </li>
+                    <li>
+                        <a href="#">Sapien elit in malesuada semper.</a>
+                    </li>
+                    <li>
+                        <a href="#">Mi, id sollicitudin urna fermentum.</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="small">
+                    <li>
+                        <a href="#">Consectetur adipiscing elit fusce vel.</a>
+                    </li>
+                    <li>
+                        <a href="#">Sapien elit in malesuada semper.</a>
+                    </li>
+                    <li>
+                        <a href="#">Mi, id sollicitudin urna fermentum.</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-12 text-center">
+                <hr />
+                <span class="small">Tum Haklari Saklidir &copy;</span>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

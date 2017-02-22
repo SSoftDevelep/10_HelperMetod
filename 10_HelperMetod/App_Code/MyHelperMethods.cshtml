@@ -1,0 +1,33 @@
+﻿@helper Input(string name,string typ, string val) { 
+    <input name="@name" id="@name" type="@typ" value="@val" />
+    }
+
+@helper Table(string name,int rows, int coloums,params string[] headers) { 
+
+    <table name="@name" id="@name" border="1">
+
+        <thead>
+            <tr>
+                @for (int i = 0; i < coloums; i++)
+                {
+                    <th>@headers[i]</th>
+                }
+            </tr>
+        </thead>
+        
+        @for (int i = 0; i < rows; i++)
+        {
+            <tr>
+                @for (int j = 0; j < coloums; j++)
+                {
+                    <td>@(j.ToString()+","+i.ToString())</td>
+                }
+
+            </tr>
+
+        }
+
+
+    </table>
+
+    }
